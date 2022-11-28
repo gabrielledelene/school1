@@ -1,0 +1,23 @@
+// main class
+public class Test {
+    // main method
+    public static void main(String args[]) {
+        // array of numbers
+        int arr [] = {1,2,3,4,5,6,7,8,9};
+        // prompt display output
+        System.out.println("Given elements order is: 1 2 3 4 5 6 7 8 9 ");
+        System.out.println("Reverse order is: ");
+        //call the recursive method
+        backward(arr, 0, 8);
+    }
+
+    //Recursive method name is backward
+    static void backward (int arr [], int first,int last) {
+        // print the array value at particular index
+        System.out.print(arr[last]+ "");
+        //call the recursive method, if is less than last
+        if (first < last) {
+            backward (arr, first, last-1);
+        }
+    }
+}
